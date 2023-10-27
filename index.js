@@ -23,7 +23,7 @@ const upload = multer({ storage: storage });
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://greatedafeoke:<password>@cluster0.rfzp39w.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://greatedafeoke:<password>@cluster0.rfzp39w.mongodb.net/server?retryWrites=true&w=majority', { useNewUrlParser: true });
 
 // Define a Mongoose model for image documents
 const Image = mongoose.model('Image', {
