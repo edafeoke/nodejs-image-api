@@ -57,7 +57,7 @@ app.post('/upload', upload.single('image'), async (req, res) => {
     await image.save();
     return res.json({ message: 'Image uploaded and information saved.' });
   } catch (err) {
-    return res.status(500).json({ error: 'Error saving image information.' });
+    return res.status(500).json({ error: 'Error saving image information.' + err.message });
   }
 });
 
